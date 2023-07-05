@@ -23,7 +23,7 @@ export const computeFibonacciNumber = (position: number, recursion: boolean = fa
     let currentPosition = 2;
     while (currentPosition < notNullPosition) {
         const temp = smallFibonacciNumber;
-        smallFibonacciNumber = j;
+        smallFibonacciNumber = largeFibonacciNumber;
         largeFibonacciNumber += temp;
         currentPosition++;
     }
