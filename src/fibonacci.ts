@@ -17,17 +17,17 @@ export const computeFibonacciNumber = (position: number, recursion: boolean = fa
         return 1;
     }
 
-    let i = 1;
-    let j = 1;
+    let smallFibonacciNumber = 1;
+    let largeFibonacciNumber = 1;
 
     let currentPosition = 2;
     while (currentPosition < notNullPosition) {
-        const temp = i;
-        i = j;
-        j += temp;
+        const temp = smallFibonacciNumber;
+        smallFibonacciNumber = j;
+        largeFibonacciNumber += temp;
         currentPosition++;
     }
-    return j;
+    return largeFibonacciNumber;
 };
 
 const computeNegativeFibonacci = (position: number): number => {
